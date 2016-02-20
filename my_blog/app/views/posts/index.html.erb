@@ -1,0 +1,13 @@
+<h1>記事一覧</h1>
+
+    <%= link_to '新規登録', '/posts/new' %>
+
+<ul>
+  <% @post.each do |post| %>
+    <li>
+      <%= link_to post.title, post_path(post) %>
+      <%= link_to '削除', post_path(post), method: :delete %>
+      <%= link_to '編集', edit_path(post) %>
+    </li>
+  <% end -%>
+</ul>

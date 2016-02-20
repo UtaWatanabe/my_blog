@@ -20,7 +20,7 @@ end
   end
 
 def update
-    @post = Item.find(params[:id])
+    @post = Post.find(params[:id])
     @post.update(post_params)
     redirect_to @post
 end
@@ -34,7 +34,7 @@ def destroy
 end
 
 private
-  def item_params
+  def post_params
     # ここで各種パラメータを定義
     params.require(:post).permit(
         :title, :body, :category,

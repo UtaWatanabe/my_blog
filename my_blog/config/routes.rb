@@ -6,7 +6,7 @@ patch '/posts/:id' => 'posts#update'
 delete '/posts/:id' => 'posts#destroy'
 get 'posts/:id/edit' => 'posts#edit' ,as: :edit
 get '/posts' => 'posts#index'
-# post '/posts' => 'posts#create'
+post '/posts' => 'posts#create'
 
 root 'posts#index'
   # The priority is based upon order of creation: first created -> highest priority.
